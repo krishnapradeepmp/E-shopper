@@ -1,6 +1,6 @@
 <?php
 include_once 'config.php';
-$sql= "SELECT * FROM product";
+$sql= "SELECT * FROM product LIMIT 0,6" ;
 $result=$con->query($sql);
 while($row= mysqli_fetch_assoc($result))
 {
