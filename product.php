@@ -17,9 +17,9 @@ echo '<div class="col-sm-4">
 										'</h2>
 										<p>'
 											.$row['productname'].
-										'</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
+										'</p>'.
+										//<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									'</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
 											<h2>$'
@@ -28,7 +28,10 @@ echo '<div class="col-sm-4">
 											<p>'
 											.$row['productname'].
 										'</p>
-											<a href="http://localhost/eshopper/product-details.php#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>CUSTOMIZE NOW</a>
+											<a href="http://localhost/eshopper/product-details.php?id='
+											.$row['id'].
+										'" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>CUSTOMIZE NOW</a>
+                                                                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
 										</div>
 									</div>
 								</div>
