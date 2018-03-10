@@ -1,6 +1,6 @@
 <?php
 include_once 'config.php';
-$sql= "SELECT `product`.`id`, `productname`, `prize`,`IMAGE`,`cart`.`quantity` FROM `product`,`cart` WHERE `item_ID`=`product`.`id`";
+$sql= "SELECT cart.id as cart_id,`product`.`id`, `productname`, `prize`,`IMAGE`,`cart`.`quantity` FROM `product`,`cart` WHERE `item_ID`=`product`.`id` AND `customer_id`=".$_SESSION["customer_id"];
 $result=$con->query($sql);
 echo'<tbody>';
 while($row= mysqli_fetch_assoc($result))
@@ -9,10 +9,10 @@ echo'
 
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="images/'.$row['IMAGE'].'" height="200" width="200" alt=""></a>
+								<a href="product-details.php?id='.$row['id'].'"><img src="images/'.$row['IMAGE'].'" height="200" width="200" alt=""></a>
 							</td>
-							<td class="cart_description">
-								<h4><a href="">'.$row['productname'].'</a></h4>
+				<td class="cart_description">
+								<h4><a href="product-details.php?id='.$row['id'].'">'.$row['productname'].'</a></h4>
 								<p>Web ID '.$row['id'].'</p>
 							</td>
 							<td class="cart_price">
@@ -29,7 +29,7 @@ echo'
 								<p class="cart_total_price">'.($row['prize']*$row['quantity']).'</p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="RemoveFromCart.php?id='.$row['cart_id'].'"><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
 

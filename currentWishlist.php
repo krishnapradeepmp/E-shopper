@@ -49,7 +49,7 @@ session_start();
 							<td></td>
 						</tr>
 					</thead>
-					<?php include_once 'cart.php';?>
+					<?php include_once 'wlist.php';?>
 				</table>
 			</div>
 		</div>
