@@ -36,6 +36,8 @@ $row = mysqli_fetch_assoc($result);
                 <label>Quantity:</label><form name="insert" action="insertToCart.php?id=<?php echo $row['id']; ?>" method="POST">
                     <input type="text" value="1" name="qty"/> 
                     <input type="submit" value="insertbutton" name="addcart" />
+                    <a href="insertToWishlist.php?id=<?php echo $row['id']; ?>"><input type="button" value="Wish" /></a>
+                  
                     <!--<input type="submit" value="Add2Wishlist" name="addcart" /></form>-->
 
                 <!--<button type="button" class="btn btn-fefault cart">-->
