@@ -11,7 +11,7 @@ while($row= mysqli_fetch_assoc($result))
 								<a href=""><img src="images/'.$row['IMAGE'].'" alt=""></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href="">"images/'.$row['productname'].'"</a></h4>
+								<h4><a href="">'.$row['productname'].'</a></h4>
 								<p>Web ID:'.$row['id'].'</p>
 							</td>
 							<td class="cart_price">
@@ -25,7 +25,7 @@ while($row= mysqli_fetch_assoc($result))
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">'.($row['prize']*$row['quantity']).'</p>
+								<p class="cart_total_price">'.($row['prize']*$row['quantity']).'</p> 
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -39,7 +39,7 @@ echo'<tr>
 								<table class="table table-condensed total-result">
 									<tr>
 										<td>Cart Sub Total</td>
-										<td>.$total;.</td>
+										<td>'.$total.'</td>
 									</tr>
 			
 									<tr class="shipping-cost">
@@ -48,9 +48,8 @@ echo'<tr>
 									</tr>
 									<tr>
 										<td>Total</td>
-										<td><span>$61</span></td>
+										<td><span>'.$total.'</span></td>
 									</tr>
 								</table>
 							</td>
 						</tr>';
-echo "total".$total;

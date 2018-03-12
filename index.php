@@ -6,8 +6,8 @@ if ($_SESSION["customer_id"] == '') {
     $result = $con->query($sql);
     $row = mysqli_fetch_assoc($result);
     $_SESSION["customer_id"] = $row["MAX(id)"] + 1;
-    $sql = "INSERT INTO `customer`(`c_name`, `c_address`) VALUES ('guest','guestAddress')";
-    $con->query($sql);
+    $sql1 = "INSERT INTO `customer`(`c_name`, `c_address`) VALUES ('guest','guestAddress')";
+    $con->query($sql1);
 }
 
 echo $_SESSION["customer_id"];
