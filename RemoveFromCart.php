@@ -10,6 +10,6 @@ $sql = "DELETE from `cart` where id=$id";
 echo $sql;
 $con->query($sql);
 echo '<script>alert("Deleted from Cart Successfully...")</script>';
-//echo '<script>window.location="currentCart.php"</script>';
+echo '<script>window.location="currentCart.php"</script>';
 
 
