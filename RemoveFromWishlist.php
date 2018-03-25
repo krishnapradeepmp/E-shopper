@@ -1,9 +1,13 @@
 <?php
+
 session_start();
- include_once 'config.php';
- $id=$_GET['id'];
- $sql="DELETE FROM `wishlist` where id=$id";
-$con->querry($sql);
+
+include_once 'config.php';
+$id = $_GET['id'];
+$sql = "DELETE from `wishlist` where id=$id";
+$con->query($sql);
 echo '<script>alert("Deleted from Wishlist Successfully...")</script>';
 echo '<script>window.location="currentWishlist.php"</script>';
+
+
  

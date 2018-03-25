@@ -5,7 +5,7 @@ $sql= "SELECT * FROM product";
 $result=$con->query($sql);
 while($row= mysqli_fetch_assoc($result))
 {
-echo '<div class="col-sm-4">
+echo ' <div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
@@ -42,5 +42,7 @@ echo '<div class="col-sm-4">
 									</ul>
 								</div>
 							</div>
-						</div>';
+						</div>
+                                                '
+     ;
 }					
