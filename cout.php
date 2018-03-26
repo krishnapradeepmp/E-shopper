@@ -78,7 +78,7 @@ if (mysqli_num_rows($result) != 0) {
                                                     <td></td>
                                                     <td></td>
                                                     <td colspan="2">
-                                                        <a class="btn btn-default check_out" href="">Check Out ...</a>
+                                                        <a class="btn btn-default check_out" href="pay.php">Check Out ...</a>
                                                     </td>
                                                 </tr>';
     echo '     </tbody>
