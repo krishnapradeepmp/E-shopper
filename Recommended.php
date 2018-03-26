@@ -11,9 +11,11 @@ echo '<div class="col-sm-4">
 													<img src="images/'
 											.$row['IMAGE'].
 										'" alt="" />
-													<h2>'.$row['prize'].'</h2>
+													<h2>Rs. '.$row['prize'].'</h2>
 													<p>'.$row['productname'].'</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+													<a href="http://localhost/eshopper/product-details.php?id='
+    . $row['id'] .
+    '" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Details</a>
 												</div>
 												
 											</div>

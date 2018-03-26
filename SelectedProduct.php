@@ -37,7 +37,7 @@ $row = mysqli_fetch_assoc($result);
                     <input type="text" value="1" name="qty"/> 
                     <input type="submit" value="insertbutton" name="addcart" />
                     <a href="insertToWishlist.php?id=<?php echo $row['id']; ?>"><input type="button" value="Wish" /></a>
-                    <a href="http://localhost/html5-picture-editor/index.php?image=http://localhost/eshopper/images/<?php echo $row['IMAGE']; ?>"><input type="button" value="Customize" /></a>
+                    <a href="picture_editor/editor.php?image=http://localhost/eshopper/images/<?php echo $row['IMAGE']; ?>&id=<?php echo $row['id']; ?>"><input type="button" value="Customize" /></a>
                   
                     <!--<input type="submit" value="Add2Wishlist" name="addcart" /></form>-->
 

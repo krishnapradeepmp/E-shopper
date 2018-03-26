@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                        <a href="index.php"><img src="images/home/logo.png" alt="" /></a>
                     </div>
 
 
@@ -42,7 +42,7 @@
                             <li><a href="currentWishlist.php"><i class="fa fa-star"></i> Wishlist</a></li>
                             <li><a href="checkout.php"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                             <li><a href="currentCart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a href="Gift_Admin/pages/examples/login.html"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="Gift_Admin/pages/examples/login.php"><i class="fa fa-lock"></i> Login</a></li>
                         </ul>
                     </div>
                 </div>
