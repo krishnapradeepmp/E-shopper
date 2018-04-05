@@ -28,7 +28,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 											<p>'
     . $row['productname'] .
     '</p>
-											<a href="http://localhost/eshopper/product-details.php?id='
+											<a href="product-details.php?id='
     . $row['id'] .
     '" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Details</a>';
 //                                                                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
