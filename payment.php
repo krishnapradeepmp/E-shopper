@@ -12,11 +12,11 @@ $sql = "SELECT cart.id as cart_id,`product`.`id`, `productname`, `prize`,`IMAGE`
 $result = $con->query($sql);
 while ($row = mysqli_fetch_assoc($result)) {
     if ($row['custom'] == '') {
-        $sql = "INSERT INTO `orders`(`model_id`, `quantity`, `customer_id`, `amount`) VALUES 
-    (" . $row['id'] . "," . $row['quantity'] . ",$last_id," . ($row['prize'] * $row['quantity']) . ")";
+        $sql = "INSERT INTO `orders`(`model_id`, `quantity`, `customer_id`, `amount`, `odate`, `expecteddate`) VALUES 
+    (" . $row['id'] . "," . $row['quantity'] . ",$last_id," . ($row['prize'] * $row['quantity']) . ",NOW(),NOW())";
     } else {
-        $sql = "INSERT INTO `orders`(`model_id`, `quantity`, `customer_id`, `amount`, `custom`) VALUES 
-    (" . $row['id'] . "," . $row['quantity'] . ",$last_id," . ($row['prize'] * $row['quantity']) . ",'" . $row['custom'] . "')";
+        $sql = "INSERT INTO `orders`(`model_id`, `quantity`, `customer_id`, `amount`, `custom`, `odate`, `expecteddate`) VALUES 
+    (" . $row['id'] . "," . $row['quantity'] . ",$last_id," . ($row['prize'] * $row['quantity']) . ",'" . $row['custom'] . "',NOW(),NOW())";
     }
 //    echo $sql;
     $con->query($sql);
